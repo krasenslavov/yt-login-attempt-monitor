@@ -1,0 +1,467 @@
+/**
+ * YT Login Attempt Monitor - Admin Styles
+ *
+ * @package YT_Login_Attempt_Monitor
+ * @version 1.0.0
+ */
+
+/* Statistics boxes */
+.yt-lam-stats {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 20px;
+	margin: 20px 0 30px;
+}
+
+.yt-lam-stat-box {
+	background: #fff;
+	border: 1px solid #ccd0d4;
+	border-radius: 8px;
+	padding: 20px;
+	text-align: center;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+	transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.yt-lam-stat-box:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.yt-lam-stat-value {
+	font-size: 32px;
+	font-weight: 700;
+	line-height: 1.2;
+	margin-bottom: 8px;
+}
+
+.yt-lam-stat-label {
+	font-size: 13px;
+	color: #646970;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	font-weight: 500;
+}
+
+/* Stat box color variants */
+.yt-lam-stat-total .yt-lam-stat-value {
+	color: #2271b1;
+}
+
+.yt-lam-stat-success .yt-lam-stat-value {
+	color: #00a32a;
+}
+
+.yt-lam-stat-failed .yt-lam-stat-value {
+	color: #d63638;
+}
+
+.yt-lam-stat-today .yt-lam-stat-value {
+	color: #f0b849;
+}
+
+/* Actions bar */
+.yt-lam-actions {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 20px 0;
+	padding: 15px;
+	background: #f6f7f7;
+	border-radius: 4px;
+}
+
+.yt-lam-filters form {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+}
+
+.yt-lam-filters select,
+.yt-lam-filters input[type="search"] {
+	height: 32px;
+}
+
+.yt-lam-filters input[type="search"] {
+	min-width: 200px;
+}
+
+.yt-lam-bulk-actions {
+	display: flex;
+	gap: 10px;
+}
+
+/* Table styling */
+.yt-lam-table {
+	margin-top: 20px;
+}
+
+.yt-lam-table thead th {
+	font-weight: 600;
+	background: #f6f7f7;
+}
+
+.yt-lam-table tbody tr:hover {
+	background: #f9f9f9;
+}
+
+.yt-lam-no-logs {
+	text-align: center;
+	padding: 40px 20px;
+	color: #646970;
+	font-style: italic;
+}
+
+/* Timestamp styling */
+.yt-lam-timestamp {
+	font-size: 12px;
+	color: #646970;
+	display: inline-block;
+	margin-top: 4px;
+}
+
+/* Status badges */
+.yt-lam-status {
+	display: inline-block;
+	padding: 4px 10px;
+	border-radius: 3px;
+	font-size: 12px;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+
+.yt-lam-status-success {
+	background: #d4edda;
+	color: #155724;
+	border: 1px solid #c3e6cb;
+}
+
+.yt-lam-status-failed {
+	background: #f8d7da;
+	color: #721c24;
+	border: 1px solid #f5c6cb;
+}
+
+/* User agent info */
+.yt-lam-user-agent {
+	font-size: 12px;
+	color: #646970;
+	cursor: help;
+}
+
+.yt-lam-na {
+	color: #999;
+	font-style: italic;
+	font-size: 12px;
+}
+
+/* Delete button */
+.yt-lam-delete-log {
+	color: #d63638;
+	border-color: #d63638;
+}
+
+.yt-lam-delete-log:hover {
+	background: #d63638;
+	color: #fff;
+	border-color: #d63638;
+}
+
+/* IP address styling */
+code {
+	background: #f0f0f1;
+	padding: 3px 6px;
+	border-radius: 3px;
+	font-size: 12px;
+	font-family: Consolas, Monaco, monospace;
+}
+
+/* Loading state */
+.yt-lam-loading {
+	position: relative;
+	opacity: 0.5;
+	pointer-events: none;
+}
+
+.yt-lam-loading::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 24px;
+	height: 24px;
+	margin: -12px 0 0 -12px;
+	border: 3px solid #f3f3f3;
+	border-top: 3px solid #2271b1;
+	border-radius: 50%;
+	animation: yt-lam-spin 0.8s linear infinite;
+}
+
+@keyframes yt-lam-spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+
+/* Messages */
+.yt-lam-message {
+	padding: 10px 15px;
+	margin: 15px 0;
+	border-radius: 4px;
+	font-size: 14px;
+}
+
+.yt-lam-message-success {
+	background: #d4edda;
+	color: #155724;
+	border: 1px solid #c3e6cb;
+}
+
+.yt-lam-message-error {
+	background: #f8d7da;
+	color: #721c24;
+	border: 1px solid #f5c6cb;
+}
+
+.yt-lam-message-info {
+	background: #d1ecf1;
+	color: #0c5460;
+	border: 1px solid #bee5eb;
+}
+
+/* Pagination */
+.tablenav-pages {
+	float: right;
+}
+
+.tablenav-pages .pagination-links {
+	display: flex;
+	gap: 5px;
+	align-items: center;
+}
+
+.tablenav-pages a,
+.tablenav-pages span.current {
+	padding: 6px 12px;
+	border: 1px solid #c3c4c7;
+	border-radius: 3px;
+	text-decoration: none;
+	color: #2c3338;
+}
+
+.tablenav-pages a:hover {
+	background: #f6f7f7;
+	border-color: #8c8f94;
+}
+
+.tablenav-pages span.current {
+	background: #2271b1;
+	color: #fff;
+	border-color: #2271b1;
+}
+
+/* Responsive design */
+@media screen and (max-width: 782px) {
+	.yt-lam-stats {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 15px;
+	}
+
+	.yt-lam-stat-value {
+		font-size: 24px;
+	}
+
+	.yt-lam-stat-label {
+		font-size: 11px;
+	}
+
+	.yt-lam-actions {
+		flex-direction: column;
+		gap: 15px;
+		align-items: stretch;
+	}
+
+	.yt-lam-filters form {
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	.yt-lam-filters select,
+	.yt-lam-filters input[type="search"],
+	.yt-lam-filters button {
+		width: 100%;
+	}
+
+	.yt-lam-bulk-actions {
+		flex-direction: column;
+	}
+
+	.yt-lam-bulk-actions button {
+		width: 100%;
+	}
+
+	/* Simplify table on mobile */
+	.yt-lam-table {
+		font-size: 13px;
+	}
+
+	.yt-lam-table td,
+	.yt-lam-table th {
+		padding: 8px 5px;
+	}
+
+	/* Hide less important columns on mobile */
+	.yt-lam-table th:nth-child(5),
+	.yt-lam-table td:nth-child(5) {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.yt-lam-stats {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* Print styles */
+@media print {
+	.yt-lam-actions,
+	.yt-lam-delete-log,
+	.tablenav {
+		display: none !important;
+	}
+
+	.yt-lam-stat-box {
+		break-inside: avoid;
+		box-shadow: none;
+		border: 1px solid #000;
+	}
+
+	.yt-lam-table {
+		border: 1px solid #000;
+	}
+
+	.yt-lam-table th,
+	.yt-lam-table td {
+		border: 1px solid #000;
+	}
+
+	.yt-lam-status-success {
+		background: #fff !important;
+		color: #000 !important;
+		border: 1px solid #000 !important;
+	}
+
+	.yt-lam-status-failed {
+		background: #fff !important;
+		color: #000 !important;
+		border: 1px solid #000 !important;
+	}
+}
+
+/* Accessibility */
+.yt-lam-table:focus-within {
+	outline: 2px solid #2271b1;
+	outline-offset: 2px;
+}
+
+.yt-lam-delete-log:focus {
+	box-shadow: 0 0 0 2px #fff, 0 0 0 4px #d63638;
+}
+
+button:disabled {
+	cursor: not-allowed;
+	opacity: 0.5;
+}
+
+/* Tooltips */
+[title] {
+	cursor: help;
+	border-bottom: 1px dotted #999;
+}
+
+/* Settings page */
+.form-table th {
+	padding: 20px 10px 20px 0;
+}
+
+.form-table td {
+	padding: 15px 10px;
+}
+
+.form-table input[type="checkbox"] {
+	margin-right: 8px;
+}
+
+.form-table p.description {
+	margin-top: 8px;
+	color: #646970;
+}
+
+/* Empty state */
+.yt-lam-empty-state {
+	text-align: center;
+	padding: 60px 20px;
+	background: #fff;
+	border: 2px dashed #c3c4c7;
+	border-radius: 8px;
+	margin: 20px 0;
+}
+
+.yt-lam-empty-state-icon {
+	font-size: 48px;
+	margin-bottom: 15px;
+	opacity: 0.5;
+}
+
+.yt-lam-empty-state-title {
+	font-size: 18px;
+	font-weight: 600;
+	margin-bottom: 10px;
+	color: #1d2327;
+}
+
+.yt-lam-empty-state-text {
+	color: #646970;
+	font-size: 14px;
+}
+
+/* Animation for new rows */
+@keyframes fadeInSlide {
+	from {
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.yt-lam-table tbody tr {
+	animation: fadeInSlide 0.3s ease-out;
+}
+
+/* Export button styling */
+#yt-lam-export-logs {
+	background: #00a32a;
+	color: #fff;
+	border-color: #00a32a;
+}
+
+#yt-lam-export-logs:hover {
+	background: #008a24;
+	border-color: #008a24;
+}
+
+/* Clear logs button styling */
+#yt-lam-clear-logs {
+	background: #d63638;
+	color: #fff;
+	border-color: #d63638;
+}
+
+#yt-lam-clear-logs:hover {
+	background: #b32d2e;
+	border-color: #b32d2e;
+}

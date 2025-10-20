@@ -3,7 +3,7 @@
  * Plugin Name: YT Login Attempt Monitor
  * Plugin URI: https://github.com/krasenslavov/yt-login-attempt-monitor
  * Description: Monitor and log all login attempts (successful and failed) with detailed information including user, IP address, status, and timestamp.
- * Version: 1.0.0
+ * Version: 1.0.1
  * Requires at least: 5.8
  * Requires PHP: 7.4
  * Author: Krasen Slavov

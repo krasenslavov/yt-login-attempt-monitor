@@ -8,8 +8,8 @@
 /* Statistics boxes */
 .yt-lam-stats {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 	gap: 20px;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 	margin: 20px 0 30px;
 }
 
@@ -17,15 +17,15 @@
 	background: #fff;
 	border: 1px solid #ccd0d4;
 	border-radius: 8px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 	padding: 20px;
 	text-align: center;
-	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 	transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .yt-lam-stat-box:hover {
-	transform: translateY(-2px);
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	transform: translateY(-2px);
 }
 
 .yt-lam-stat-value {
@@ -36,11 +36,11 @@
 }
 
 .yt-lam-stat-label {
-	font-size: 13px;
 	color: #646970;
-	text-transform: uppercase;
-	letter-spacing: 0.5px;
+	font-size: 13px;
 	font-weight: 500;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
 }
 
 /* Stat box color variants */
@@ -62,19 +62,19 @@
 
 /* Actions bar */
 .yt-lam-actions {
-	display: flex;
-	justify-content: space-between;
 	align-items: center;
-	margin: 20px 0;
-	padding: 15px;
 	background: #f6f7f7;
 	border-radius: 4px;
+	display: flex;
+	justify-content: space-between;
+	margin: 20px 0;
+	padding: 15px;
 }
 
 .yt-lam-filters form {
+	align-items: center;
 	display: flex;
 	gap: 10px;
-	align-items: center;
 }
 
 .yt-lam-filters select,
@@ -97,8 +97,8 @@
 }
 
 .yt-lam-table thead th {
-	font-weight: 600;
 	background: #f6f7f7;
+	font-weight: 600;
 }
 
 .yt-lam-table tbody tr:hover {
@@ -106,127 +106,132 @@
 }
 
 .yt-lam-no-logs {
-	text-align: center;
-	padding: 40px 20px;
 	color: #646970;
 	font-style: italic;
+	padding: 40px 20px;
+	text-align: center;
 }
 
 /* Timestamp styling */
 .yt-lam-timestamp {
-	font-size: 12px;
 	color: #646970;
 	display: inline-block;
+	font-size: 12px;
 	margin-top: 4px;
 }
 
 /* Status badges */
 .yt-lam-status {
-	display: inline-block;
-	padding: 4px 10px;
 	border-radius: 3px;
+	display: inline-block;
 	font-size: 12px;
 	font-weight: 600;
-	text-transform: uppercase;
 	letter-spacing: 0.5px;
+	padding: 4px 10px;
+	text-transform: uppercase;
 }
 
 .yt-lam-status-success {
 	background: #d4edda;
-	color: #155724;
 	border: 1px solid #c3e6cb;
+	color: #155724;
 }
 
 .yt-lam-status-failed {
 	background: #f8d7da;
-	color: #721c24;
 	border: 1px solid #f5c6cb;
+	color: #721c24;
 }
 
 /* User agent info */
 .yt-lam-user-agent {
-	font-size: 12px;
 	color: #646970;
 	cursor: help;
+	font-size: 12px;
 }
 
 .yt-lam-na {
 	color: #999;
-	font-style: italic;
 	font-size: 12px;
+	font-style: italic;
 }
 
 /* Delete button */
 .yt-lam-delete-log {
-	color: #d63638;
 	border-color: #d63638;
+	color: #d63638;
 }
 
 .yt-lam-delete-log:hover {
 	background: #d63638;
-	color: #fff;
 	border-color: #d63638;
+	color: #fff;
 }
 
 /* IP address styling */
 code {
 	background: #f0f0f1;
-	padding: 3px 6px;
 	border-radius: 3px;
-	font-size: 12px;
 	font-family: Consolas, Monaco, monospace;
+	font-size: 12px;
+	padding: 3px 6px;
 }
 
 /* Loading state */
 .yt-lam-loading {
-	position: relative;
 	opacity: 0.5;
 	pointer-events: none;
+	position: relative;
 }
 
 .yt-lam-loading::after {
+	animation: yt-lam-spin 0.8s linear infinite;
+	border: 3px solid #f3f3f3;
+	border-radius: 50%;
+	border-top: 3px solid #2271b1;
 	content: '';
+	height: 24px;
+	left: 50%;
+	margin: -12px 0 0 -12px;
 	position: absolute;
 	top: 50%;
-	left: 50%;
 	width: 24px;
-	height: 24px;
-	margin: -12px 0 0 -12px;
-	border: 3px solid #f3f3f3;
-	border-top: 3px solid #2271b1;
-	border-radius: 50%;
-	animation: yt-lam-spin 0.8s linear infinite;
 }
 
 @keyframes yt-lam-spin {
-	0% { transform: rotate(0deg); }
-	100% { transform: rotate(360deg); }
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
 }
 
 /* Messages */
 .yt-lam-message {
-	padding: 10px 15px;
-	margin: 15px 0;
 	border-radius: 4px;
 	font-size: 14px;
+	margin: 15px 0;
+	padding: 10px 15px;
 }
 
 .yt-lam-message-success {
 	background: #d4edda;
-	color: #155724;
 	border: 1px solid #c3e6cb;
+	color: #155724;
 }
 
 .yt-lam-message-error {
 	background: #f8d7da;
-	color: #721c24;
 	border: 1px solid #f5c6cb;
+	color: #721c24;
 }
 
 .yt-lam-message-info {
 	background: #d1ecf1;
-	color: #0c5460;
 	border: 1px solid #bee5eb;
+	color: #0c5460;
 }
 
 /* Pagination */
@@ -235,18 +240,18 @@ code {
 }
 
 .tablenav-pages .pagination-links {
+	align-items: center;
 	display: flex;
 	gap: 5px;
-	align-items: center;
 }
 
 .tablenav-pages a,
 .tablenav-pages span.current {
-	padding: 6px 12px;
 	border: 1px solid #c3c4c7;
 	border-radius: 3px;
-	text-decoration: none;
 	color: #2c3338;
+	padding: 6px 12px;
+	text-decoration: none;
 }
 
 .tablenav-pages a:hover {
@@ -256,15 +261,15 @@ code {
 
 .tablenav-pages span.current {
 	background: #2271b1;
-	color: #fff;
 	border-color: #2271b1;
+	color: #fff;
 }
 
 /* Responsive design */
 @media screen and (max-width: 782px) {
 	.yt-lam-stats {
-		grid-template-columns: repeat(2, 1fr);
 		gap: 15px;
+		grid-template-columns: repeat(2, 1fr);
 	}
 
 	.yt-lam-stat-value {
@@ -276,14 +281,14 @@ code {
 	}
 
 	.yt-lam-actions {
+		align-items: stretch;
 		flex-direction: column;
 		gap: 15px;
-		align-items: stretch;
 	}
 
 	.yt-lam-filters form {
-		flex-direction: column;
 		align-items: stretch;
+		flex-direction: column;
 	}
 
 	.yt-lam-filters select,
@@ -325,6 +330,7 @@ code {
 
 /* Print styles */
 @media print {
+
 	.yt-lam-actions,
 	.yt-lam-delete-log,
 	.tablenav {
@@ -332,9 +338,9 @@ code {
 	}
 
 	.yt-lam-stat-box {
-		break-inside: avoid;
-		box-shadow: none;
 		border: 1px solid #000;
+		box-shadow: none;
+		break-inside: avoid;
 	}
 
 	.yt-lam-table {
@@ -348,14 +354,14 @@ code {
 
 	.yt-lam-status-success {
 		background: #fff !important;
-		color: #000 !important;
 		border: 1px solid #000 !important;
+		color: #000 !important;
 	}
 
 	.yt-lam-status-failed {
 		background: #fff !important;
-		color: #000 !important;
 		border: 1px solid #000 !important;
+		color: #000 !important;
 	}
 }
 
@@ -376,8 +382,8 @@ button:disabled {
 
 /* Tooltips */
 [title] {
-	cursor: help;
 	border-bottom: 1px dotted #999;
+	cursor: help;
 }
 
 /* Settings page */
@@ -394,18 +400,18 @@ button:disabled {
 }
 
 .form-table p.description {
-	margin-top: 8px;
 	color: #646970;
+	margin-top: 8px;
 }
 
 /* Empty state */
 .yt-lam-empty-state {
-	text-align: center;
-	padding: 60px 20px;
 	background: #fff;
 	border: 2px dashed #c3c4c7;
 	border-radius: 8px;
 	margin: 20px 0;
+	padding: 60px 20px;
+	text-align: center;
 }
 
 .yt-lam-empty-state-icon {
@@ -415,10 +421,10 @@ button:disabled {
 }
 
 .yt-lam-empty-state-title {
+	color: #1d2327;
 	font-size: 18px;
 	font-weight: 600;
 	margin-bottom: 10px;
-	color: #1d2327;
 }
 
 .yt-lam-empty-state-text {
@@ -432,6 +438,7 @@ button:disabled {
 		opacity: 0;
 		transform: translateY(-10px);
 	}
+
 	to {
 		opacity: 1;
 		transform: translateY(0);
@@ -445,8 +452,8 @@ button:disabled {
 /* Export button styling */
 #yt-lam-export-logs {
 	background: #00a32a;
-	color: #fff;
 	border-color: #00a32a;
+	color: #fff;
 }
 
 #yt-lam-export-logs:hover {
@@ -457,8 +464,8 @@ button:disabled {
 /* Clear logs button styling */
 #yt-lam-clear-logs {
 	background: #d63638;
-	color: #fff;
 	border-color: #d63638;
+	color: #fff;
 }
 
 #yt-lam-clear-logs:hover {
